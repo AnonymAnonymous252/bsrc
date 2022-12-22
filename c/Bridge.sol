@@ -90,7 +90,7 @@ contract Bridge is Multicall {
       } else {
         token.move(address(this), to, amount);
         if (gas > 0) {
-          to.sendValue(amount);
+          to.sendValue(gas);
         }
       }
     }
